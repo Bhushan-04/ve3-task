@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require("cors");
 require("dotenv").config();
+const taskRoutes = require('./routes/task');
+const userRoutes =  require('./routes/User');
+
 
 const app = express();
 
@@ -16,8 +19,8 @@ app.use(cors());
 const db = require("./connection/connection");
 db.sequelize.sync({force : false});
 
-app.use("/", require('./routes/task'));
-app.use("/auth", require('./routes/User'));
+app.use("/", taskRoutes);
+app.use("/auth", userRoutes);
 
 
 app.listen(process.env.PORT, () => {
