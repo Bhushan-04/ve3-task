@@ -23,6 +23,6 @@ app.use("/", taskRoutes);
 app.use("/auth", userRoutes);
 
 
-app.listen(3306, () => {
-  console.log("server is running on port " + 3306);
+app.listen(process.env.PORT, () => {
+  console.log("server is running on port " + process.env.PORT);
 });

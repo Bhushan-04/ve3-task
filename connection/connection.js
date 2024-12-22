@@ -1,13 +1,10 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
-const dbname = "taskdb";
-const dbuser = "root";
-const dbpassword = "";
+const {dbname, dbuser, dbpassword} = process.env;
 
 try {
     var sequelize = new Sequelize(dbname, dbuser, dbpassword, {
         host: "localhost",
-        port:"3306",
         dialect: "mysql",
         logging: false
     })

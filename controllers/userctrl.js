@@ -1,6 +1,7 @@
 const db = require("../connection/connection");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const {TOKEN_KEY }= process.env;
 
 // Register User
 exports.registerUser = async (req, res) => {
@@ -72,7 +73,7 @@ exports.loginUser = async (req, res) => {
             email: user.email
         };
 
-        const token = jwt.sign(tokenData, 'jhjhfjhbjhbdjbjhfjdhbdklgf', {
+        const token = jwt.sign(tokenData, TOKEN_KEY, {
             expiresIn: "24h",
         });
 
