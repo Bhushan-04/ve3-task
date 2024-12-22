@@ -142,7 +142,7 @@ To run this project, you will need to add the following environment variables to
 
 ---
 
-## User API Endpoints
+## Example Requests and Responses
 
 ### 1. POST /register
 
