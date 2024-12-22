@@ -1,7 +1,7 @@
 
 # Task CRUD
 
-This is a simple Task Management application built using Node.js, Sequelize, and PostgreSQL. It allows users to register, login, create tasks, and perform CRUD operations on tasks.
+This is a simple Task Management application built using Node.js, Sequelize, and Mysql. It allows users to register, login, create tasks, and perform CRUD operations on tasks.
 
 
 
@@ -142,7 +142,7 @@ To run this project, you will need to add the following environment variables to
 
 ---
 
-## Example Requests and Responses
+## User API Endpoints
 
 ### 1. POST /register
 
